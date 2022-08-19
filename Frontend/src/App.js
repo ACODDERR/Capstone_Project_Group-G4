@@ -10,7 +10,6 @@ import {
 import Home from './components/Home';
 import CategoriesBar from './components/CategoriesBar';
 import Gallery from './components/Gallery';
-// import CartGallery from './components/CartGallery';
 import UserCRUD from './components/UserCRUD';
 import ProductCRUD from './components/ProductCRUD';
 import Footer from './components/Footer.js';

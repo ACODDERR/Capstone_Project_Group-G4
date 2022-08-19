@@ -100,5 +100,11 @@ text-transform: capitalize;
 }
 .card-image{
 
-    height: 250px;
+    height: 200px;
+    
+}
+.card-view.card{
+
+    width: 350px;
+    height: 430px;
 }

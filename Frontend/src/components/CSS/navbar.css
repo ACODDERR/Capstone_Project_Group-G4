@@ -10,18 +10,20 @@
     margin:0px 15px  !important
 }
 .btn-active-navbar{
-  --bs-navbar-active-color:black!important
+  --bs-navbar-active-color:#FEBD69!important;
+  --bs-navbar-active-background-color:white!important
 }
 .search_box{
   width: 200px;
 }
 .bg-color{
-  background-color: grey;
+  background-color: black;
   color:var(--ivory);
 }
 .bg-color a{
   text-decoration: none !important;
   color:whitesmoke;
+
   width: fit-content;
 }
 .bg-color h1{
@@ -30,8 +32,9 @@
 }
 
 .bg-color a:hover{
-  background-color: #FEBD69;
+  background-color: white;
   border-radius: 10px;
+  color: #FEBD69;
 }
 
 .logo-title{
@@ -53,4 +56,9 @@
 
 #navbarSupportedContent.show ul{
   align-items: center;
+}
+
+.form-control.me-2.search_box{
+
+  margin-left: 20px;
 }

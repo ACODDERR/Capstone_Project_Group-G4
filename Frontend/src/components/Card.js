@@ -1,17 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react'
-import axios from 'axios';
-import toast from "react-hot-toast"
 import "./CSS/card.css"
 import UserContext from '../context/UserContext/UserContext';
 
 
 function Card(props) {
-  const { isLogin, username, token } = useContext(UserContext)
-  const [quantity, setQunatity] = useState(1)
+  const { isLogin} = useContext(UserContext)
+  const [quantity, setQunatity] = useState(0)
   const [outOfStock, setOutOfStock] = useState(false)
 
   useEffect(()=>{
-    if(props.productValue.stock==0){
+    if(props.productValue.stock===0){
       setOutOfStock(true)
     }
   },[])
@@ -37,9 +35,9 @@ function Card(props) {
        
         {outOfStock && <p>OUT OF STOCK</p>}
         {isLogin && !outOfStock && <div className='quantity-div'>
-          <button className="btn btn-danger" onClick={incrementQuantity}>+</button>
+          <button className="btn btn-light" onClick={incrementQuantity}>+</button>
           <p>{quantity}</p>
-          <button className="btn btn-danger" onClick={decrementQuantity}>-</button>
+          <button className="btn btn-light" onClick={decrementQuantity}>-</button>
         </div>}
       
       </div>

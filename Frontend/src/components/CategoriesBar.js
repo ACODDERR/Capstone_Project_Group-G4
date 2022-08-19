@@ -13,25 +13,23 @@ function CategoriesBar() {
                     </button>
                     <div className="collapse navbar-collapse" id="categorySupportedContent" data-toggle="collapse" data-target=".navbar-collapse" >
                         <ul className="navbar-nav  mb-2 mb-lg-0 ">
-                            <li className="nav-item">
+                            <li className="nav-item a">
                                 <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/sofa">Sofa</NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item a">
                                 <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/recliner">Recliners</NavLink>
                             </li>
                             
-                            <li className="nav-item">
-                                <NavLink className="nav-link btn-active-categories" to="/category/wall-accent">Wall accents</NavLink>
+                            <li className="nav-item a">
+                                <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/wall-accent">Wall accents</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link btn-active-categories" to="/category/decor">Decor</NavLink>
+                            <li className="nav-item a">
+                                <NavLink className="nav-link btn-active-categories"  aria-current="page" to="/category/decor">Decor</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link btn-active-categories" to="/category/lighting">Lighting</NavLink>
+                            <li className="nav-item a">
+                                <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/lighting">Lighting</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link btn-active-categories" to="/category/carpet">Carpets</NavLink>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
