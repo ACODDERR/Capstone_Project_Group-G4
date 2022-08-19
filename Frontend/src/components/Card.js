@@ -25,31 +25,7 @@ function Card(props) {
       setQunatity(prev => prev - 1)
     }
   }
-  const addToCart = () => {
-    const data = {
-      username: username,
-      product_name: props.productValue._id,
-      quantity: quantity,
-      price: quantity * props.productValue.price
-    }
-
-    axios.post("http://localhost:9000/user/cart/add-item", JSON.stringify(data), { headers: { 'Content-Type': "application/json", "token": token } }).then(result => {
-      toast.success("Added Item To Cart")
-    }).catch(err => { toast.error("Failed To Add Item in Cart") })
-
-  }
-  const addToWishlist = () => {
-    const data = {
-      username: username,
-      product_name: props.productValue._id,
-      price: props.productValue.price
-    }
-
-    axios.post("http://localhost:9000/user/wishlist/add-item", JSON.stringify(data), { headers: { 'Content-Type': "application/json", "token": token } }).then(result => {
-      toast.success("Item Added To Wishlist")
-    }).catch(err => { toast.error("Failed To Add Item To Wishlist") })
-
-  }
+ 
 
   return (
     <div className="card-view card" >
@@ -58,15 +34,14 @@ function Card(props) {
         <h5 className="card-title productName" style={{fontFamily:"var(--oswald)"}}>{props.productValue.productName}</h5>
         <p className="card-text companyName " style={{textTransform:"capitalize"}}>{` by ${props.productValue.companyName}`}</p>
         <p className="card-text priceValue" style={{fontSize:"1.3rem"}}>{` Rs.${props.productValue.price}`}</p>
-        <p className="card-text tagsLabel" style={{opacity:"0.5"}}>{`Tags: ${props.productValue.tags}`}</p>
+       
         {outOfStock && <p>OUT OF STOCK</p>}
         {isLogin && !outOfStock && <div className='quantity-div'>
-          <button className="btn btn-primary" onClick={incrementQuantity}>+</button>
+          <button className="btn btn-danger" onClick={incrementQuantity}>+</button>
           <p>{quantity}</p>
-          <button className="btn btn-primary" onClick={decrementQuantity}>-</button>
+          <button className="btn btn-danger" onClick={decrementQuantity}>-</button>
         </div>}
-        {isLogin && !outOfStock && <button type="submit" className="btn btn-primary" onClick={addToCart}>Add To Cart</button>}
-        {isLogin && <button type="submit" className="btn btn-primary" onClick={addToWishlist}>Add To Wishlist</button>}
+      
       </div>
     </div>
   )

@@ -39,13 +39,13 @@ text-transform: capitalize;
  /* display: flex !important;
  flex-direction: column !important;
  justify-content: center !important; */
-    box-shadow: 2px 2px 5px rgb(159, 156, 156);
+    box-shadow: 10px 10px 15px rgb(159, 156, 156);
 }
 .card-view:hover{
  /* display: flex !important;
  flex-direction: column !important;
  justify-content: center !important; */
-    box-shadow: 2px 2px 5px #997ce7;
+    box-shadow: 12px 12px 15px bisque;
 }
 
 .card-view .btn{
@@ -53,18 +53,18 @@ text-transform: capitalize;
 }
 
 
-@media (max-width:1250px) {
+@media (max-width:2500px) {
     .galleryView .card{
         width: 15rem !important;
     }
 }
-@media (max-width:1050px) {
+@media (max-width:1250px) {
     .galleryView .card{
         width: fit-content !important;
     }
 }
 
-@media (max-width:576px){
+@media (max-width:1025px){
     .galleryView .card-title{
         font-size: 1.5ch !important;
     }
@@ -97,4 +97,8 @@ text-transform: capitalize;
     .card-view .btn{
         margin: 0px 2px;
     }
+}
+.card-image{
+
+    height: 250px;
 }

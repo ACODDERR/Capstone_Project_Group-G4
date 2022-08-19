@@ -41,7 +41,7 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse justify-content-evenly align-items-center" id="navbarSupportedContent">
 
-                        <form className="d-flex my-2" role="search">
+                        <form className="d-flex my-1" role="search">
                             <input id="searchBar" className="form-control me-2 search_box" type="search" placeholder="Search" aria-label="Search" value={searchValue} onChange={handleOnChange} />
                             <NavLink to={`/category/${searchValue}`}><button className="btn btn-outline-light " type="submit">Search</button></NavLink>
                         </form>

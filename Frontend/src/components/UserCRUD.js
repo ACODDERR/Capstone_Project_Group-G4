@@ -14,8 +14,8 @@ function UserCRUD() {
         <>
             {isLogin && role === "admin" &&
                 <div className="button-group"> 
-                    <button className="btn btn-primary" onClick={()=>{setCrudOption("create")}} >Create New Account</button>
-                    <button className="btn btn-primary" onClick={()=>{setCrudOption("read")}} >Show Accounts</button>
+                    <button className="btn btn-success" onClick={()=>{setCrudOption("create")}} >Create New Account</button>
+                    <button className="btn btn-success" onClick={()=>{setCrudOption("read")}} >Show Accounts</button>
                 </div>
             }
 

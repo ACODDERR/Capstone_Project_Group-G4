@@ -44,10 +44,10 @@ function Gallery() {
             {categoryValue &&
                 <div className='container'>
             <div>
-                    <button className="btn btn-primary mx-1 my-2  "  onClick={()=>{setSortOption("name-d")}} >Name: A - Z</button>
-                    <button className="btn btn-primary mx-1 my-2  "  onClick={()=>{setSortOption("name-a")}} >Name: Z - A</button>
-                    <button className="btn btn-primary mx-1 my-2  "  onClick={()=>{setSortOption("price-d")}} >Price: High to Low</button>
-                    <button className="btn btn-primary mx-1 my-2  "  onClick={()=>{setSortOption("price-a")}} >Price: Low to High</button>
+                    <button className="btn btn-success mx-1 my-2  "  onClick={()=>{setSortOption("name-d")}} >Name: A - Z</button>
+                    <button className="btn btn-success mx-1 my-2  "  onClick={()=>{setSortOption("name-a")}} >Name: Z - A</button>
+                    <button className="btn btn-success mx-1 my-2  "  onClick={()=>{setSortOption("price-d")}} >Price: High to Low</button>
+                    <button className="btn btn-success mx-1 my-2  "  onClick={()=>{setSortOption("price-a")}} >Price: Low to High</button>
                 </div>
             </div>}
             <div className='appWrapper homeGalleryView'>

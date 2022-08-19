@@ -38,14 +38,14 @@ function BulkUpload() {
         onSubmit={uploadProducts}
       >
         <input
-          className="btn btn-outline-primary mb-3"
+          className="btn btn-outline-warning mb-3"
           type="file"
           name="file"
           id="fileInput"
           accept="*.csv"
           onChange={handleCsvFIleChange}
         />
-        <button type="submit" className="btn btn-outline-primary">
+        <button type="submit" className="btn btn-outline-danger">
           Upload Products
         </button>
       </form>

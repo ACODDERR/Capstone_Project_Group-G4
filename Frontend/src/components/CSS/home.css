@@ -3,13 +3,14 @@
 }
 .hero {
     width: 100%;
-    aspect-ratio: 5/2;
+    aspect-ratio: 2/2;
     /* background-image: var(--hero-image); */
     background-size: cover;
     overflow: hidden;
     background-position: center bottom -50px;
     display: flex;
     align-items: center;
+    height: 50px;
     /* background-color: aqua; */
 }
 .hero img{

@@ -11,9 +11,9 @@ function ProductCRUD() {
         <>
             {isLogin && role === "admin" &&
                 <div className="button-group">
-                    <button className="btn btn-primary" onClick={() => { setCrudOption("bulk") }} >Bulk Upload</button>
-                    <button className="btn btn-primary" onClick={() => { setCrudOption("stock") }} >Show Products</button>
-                    <button className="btn btn-primary" onClick={() => { setCrudOption("create") }} >Create New Product</button>
+                    <button className="btn btn-success" onClick={() => { setCrudOption("bulk") }} >Bulk Upload</button>
+                    <button className="btn btn-success" onClick={() => { setCrudOption("stock") }} >Show Products</button>
+                    <button className="btn btn-success" onClick={() => { setCrudOption("create") }} >Create New Product</button>
                 </div>
             }
 

@@ -10,10 +10,10 @@
     margin:0px 15px  !important
 }
 .btn-active-navbar{
-  --bs-navbar-active-color:yellow!important
+  --bs-navbar-active-color:black!important
 }
 .search_box{
-  width: 600px;
+  width: 200px;
 }
 .bg-color{
   background-color: grey;
@@ -30,7 +30,7 @@
 }
 
 .bg-color a:hover{
-  background-color:rgb(0, 200, 147);
+  background-color: #FEBD69;
   border-radius: 10px;
 }
 
