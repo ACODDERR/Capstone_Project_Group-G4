@@ -27,12 +27,12 @@ function Card(props) {
 
   return (
     <div className="card-view card" >
-      <img src={`http://localhost:9000/user/products/${props.productValue.productName }.jpg`} className="card-image card-img-top " alt="..."></img>
+      <img src={`http://localhost:9000/user/products/${props.productValue.productName}.jpg`} className="card-image card-img-top " alt="..."></img>
       <div className="card-body">
         <h5 className="card-title productName" style={{fontFamily:"var(--oswald)"}}>{props.productValue.productName}</h5>
         <p className="card-text companyName " style={{textTransform:"capitalize"}}>{` by ${props.productValue.companyName}`}</p>
         <p className="card-text priceValue" style={{fontSize:"1.3rem"}}>{` Rs.${props.productValue.price}`}</p>
-       
+        
         {outOfStock && <p>OUT OF STOCK</p>}
         {isLogin && !outOfStock && <div className='quantity-div'>
           <button className="btn btn-light" onClick={incrementQuantity}>+</button>

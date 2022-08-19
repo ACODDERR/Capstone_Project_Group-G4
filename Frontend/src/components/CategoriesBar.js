@@ -14,7 +14,7 @@ function CategoriesBar() {
                     <div className="collapse navbar-collapse" id="categorySupportedContent" data-toggle="collapse" data-target=".navbar-collapse" >
                         <ul className="navbar-nav  mb-2 mb-lg-0 ">
                             <li className="nav-item a">
-                                <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/sofa">Sofa</NavLink>
+                                <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/Sofa">Sofa</NavLink>
                             </li>
                             <li className="nav-item a">
                                 <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/recliner">Recliners</NavLink>
@@ -28,6 +28,9 @@ function CategoriesBar() {
                             </li>
                             <li className="nav-item a">
                                 <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/lighting">Lighting</NavLink>
+                            </li>
+                            <li className="nav-item a">
+                                <NavLink className="nav-link btn-active-categories" aria-current="page" to="/category/carpet">Carpet</NavLink>
                             </li>
                             
                         </ul>
