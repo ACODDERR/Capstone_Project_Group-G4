@@ -1,6 +1,6 @@
 const gateway = require("fast-gateway");
 const authenticateUser = require("../../authentication/middleware/auth");
-// const authenticateUser = require("../auth");
+
 
 const server = gateway({
     routes: [{
@@ -11,7 +11,19 @@ const server = gateway({
     {
         prefix: "/auth",
         target: "http://localhost:8080",
-    }, ]
+    }, {
+      
+        prefix: "/cart",
+        target: "http://localhost:8083",
+    }, {
+     
+        prefix: "/wishlist",
+        target: "http://localhost:8084",
+    }, {
+    
+        prefix: "/coupons",
+        target: "http://localhost:8085",
+    }]
 
 })
 server.get("/", (req, res) => {

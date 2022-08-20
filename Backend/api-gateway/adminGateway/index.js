@@ -9,6 +9,10 @@ const server = gateway({
         prefix:"/users",
         target:"http://localhost:8082",
     },
+    {
+        prefix:"/coupons",
+        target:"http://localhost:8085",
+    }
 
     ]
 })
