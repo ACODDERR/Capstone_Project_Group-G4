@@ -36,15 +36,11 @@ text-transform: capitalize;
 }
 
 .card-view{
- /* display: flex !important;
- flex-direction: column !important;
- justify-content: center !important; */
+  
     box-shadow: 10px 10px 15px rgb(159, 156, 156);
 }
 .card-view:hover{
- /* display: flex !important;
- flex-direction: column !important;
- justify-content: center !important; */
+
     box-shadow: 12px 12px 15px bisque;
 }
 
@@ -53,18 +49,18 @@ text-transform: capitalize;
 }
 
 
-@media (max-width:2500px) {
+@media (max-width:1250px) {
     .galleryView .card{
         width: 15rem !important;
     }
 }
-@media (max-width:1250px) {
+@media (max-width:1050px) {
     .galleryView .card{
         width: fit-content !important;
     }
 }
 
-@media (max-width:1025px){
+@media (max-width:576px){
     .galleryView .card-title{
         font-size: 1.5ch !important;
     }
@@ -106,5 +102,16 @@ text-transform: capitalize;
 .card-view.card{
 
     width: 350px;
-    height: 430px;
+    height: 500px;
 }
+.btn.btn-success{
+    margin-left: 2px;
+}
+.card-img-top{
+
+    height: 200px;
+}
+.prodcard.card-body{
+    height: 200px;
+}
+

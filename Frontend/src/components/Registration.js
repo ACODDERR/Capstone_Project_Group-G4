@@ -64,7 +64,7 @@ function Registration() {
                     <input name="confirmPassword" type="password" className="form-control" placeholder="Password" onChange={handleChange} value={user.confirmPassword} />
                     <label htmlFor="floatingPassword">Confirm Password</label>
                 </div>
-                <button type="button" className="btn btn-primary btn-lg space bg-btn" onClick={registerUser}>Register</button>
+                <button type="button" className="btn btn-danger btn-lg space bg-btn" onClick={registerUser}>Register</button>
             </form>
         </div>
     )

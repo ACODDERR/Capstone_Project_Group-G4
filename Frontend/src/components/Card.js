@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import "./CSS/card.css"
+import axios from 'axios'
+import toast from "react-hot-toast"
 import UserContext from '../context/UserContext/UserContext';
 
 
 function Card(props) {
-  const { isLogin} = useContext(UserContext)
-  const [quantity, setQunatity] = useState(0)
+  const { isLogin, username, token} = useContext(UserContext)
+  const [quantity, setQunatity] = useState(1)
   const [outOfStock, setOutOfStock] = useState(false)
 
   useEffect(()=>{
@@ -23,6 +25,32 @@ function Card(props) {
       setQunatity(prev => prev - 1)
     }
   }
+  const addToCart = () => {
+    const data = {
+      username: username,
+      product_name: props.productValue._id,
+      quantity: quantity,
+      price: quantity * props.productValue.price
+    }
+
+    axios.post("http://localhost:9000/user/cart/add-item", JSON.stringify(data), { headers: { 'Content-Type': "application/json", "token": token } }).then(result => {
+      toast.success("Added Item To Cart")
+    }).catch(err => { toast.error("Failed To Add Item in Cart") })
+
+  }
+  const addToWishlist = () => {
+    const data = {
+      username: username,
+      product_name: props.productValue._id,
+      price: props.productValue.price
+    }
+
+    axios.post("http://localhost:9000/user/wishlist/add-item", JSON.stringify(data), { headers: { 'Content-Type': "application/json", "token": token } }).then(result => {
+      toast.success("Item Added To Wishlist")
+    }).catch(err => { toast.error("Failed To Add Item To Wishlist") })
+
+  }
+
  
 
   return (
@@ -39,7 +67,8 @@ function Card(props) {
           <p>{quantity}</p>
           <button className="btn btn-light" onClick={decrementQuantity}>-</button>
         </div>}
-      
+        {isLogin && !outOfStock && <button type="submit" className="btn btn-warning" onClick={addToCart}>Add To Cart</button>}
+        {isLogin && <button type="submit" className="btn btn-warning" onClick={addToWishlist}>Add To Wishlist</button>}
       </div>
     </div>
   )

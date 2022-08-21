@@ -78,7 +78,7 @@ function Login() {
                 <NavLink to={"/"}>
                 <button
                     type="button"
-                    className="btn btn-primary btn-lg space bg-btn"
+                    className="btn btn-danger btn-lg space bg-btn"
                     onClick={loginUser}
                 >
                     Login

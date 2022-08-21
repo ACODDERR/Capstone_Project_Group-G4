@@ -10,9 +10,14 @@ import {
 import Home from './components/Home';
 import CategoriesBar from './components/CategoriesBar';
 import Gallery from './components/Gallery';
+import CartGallery from './components/CartGallery';
+import Stock from './components/Reports/Stock';
 import UserCRUD from './components/UserCRUD';
 import ProductCRUD from './components/ProductCRUD';
-import Footer from './components/Footer.js';
+import Reports from './components/Reports';
+import CouponCRUD from './components/CouponCRUD';
+import Footer from './components/Footer.js'
+import OrderConfirmation from './components/Order-Confirmation'
 import { ToastContainer } from "react-toastify";
 import { Toaster } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
@@ -28,12 +33,22 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
+
+          {/* admin */}
+
           <Route path="/admin/user-crud" element={<UserCRUD></UserCRUD>} />
           <Route
             path="/admin/products-crud"
             element={<ProductCRUD></ProductCRUD>}
           />
-          
+          <Route
+            path="/admin/coupon-crud"
+            element={<CouponCRUD></CouponCRUD>}
+          />
+          <Route path="/admin/reports" element={<Reports></Reports>} />
+          <Route path="/admin/reports/stock" element={<Stock />} />
+          <Route path="/user/cart" element={<CartGallery />} />
+          <Route path="/user/order-confirm" element={<OrderConfirmation />} />
           <Route path="/category/:categoryValue" element={<Gallery />} />
         </Routes>
         <ToastContainer autoClose={2000} />
