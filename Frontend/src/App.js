@@ -14,6 +14,7 @@ import CartGallery from './components/CartGallery';
 import Stock from './components/Reports/Stock';
 import UserCRUD from './components/UserCRUD';
 import ProductCRUD from './components/ProductCRUD';
+import WishlistGallery from './components/WishlistGallery';
 import Reports from './components/Reports';
 import CouponCRUD from './components/CouponCRUD';
 import Footer from './components/Footer.js'
@@ -49,6 +50,7 @@ function App() {
           <Route path="/admin/reports/stock" element={<Stock />} />
           <Route path="/user/cart" element={<CartGallery />} />
           <Route path="/user/order-confirm" element={<OrderConfirmation />} />
+          <Route path="/user/wishlist" element={<WishlistGallery />} />
           <Route path="/category/:categoryValue" element={<Gallery />} />
         </Routes>
         <ToastContainer autoClose={2000} />
